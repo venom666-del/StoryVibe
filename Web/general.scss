@@ -1,6 +1,7 @@
-﻿.bg-gradient {
-    background-image: linear-gradient(#000000, red) !important;
+﻿@import 'bootstrap.css';
+:root {
+    --bs-dark-rgb: 0, 0, 0 !important;
 }
-$primary: #0074d9;
-$danger: #000;
-$theme-colors: ( "primary": $primary, "danger": $danger );
+.bg-dark {
+    background-image: linear-gradient(transparent, var(--bs-dark-rgb)) !important;
+}
