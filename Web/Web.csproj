@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,10 +69,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\StoryService\item.disco" />
+    <None Include="Connected Services\StoryService\configuration91.svcinfo" />
+    <None Include="Connected Services\StoryService\configuration.svcinfo" />
+    <None Include="Connected Services\StoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="wfLogin.aspx" />
+    <Content Include="wfLogout.aspx" />
+    <Content Include="wfRegister.aspx" />
+    <None Include="Connected Services\StoryService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoryService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoryService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoryService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoryService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoryService\StoryService.wsdl" />
+    <Content Include="Connected Services\StoryService\Web.StoryService.StoriesList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\UserService\item.disco" />
+    <None Include="Connected Services\UserService\configuration91.svcinfo" />
+    <None Include="Connected Services\UserService\configuration.svcinfo" />
+    <None Include="Connected Services\UserService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="general.css" />
     <Content Include="Web.config" />
     <Content Include="wfHomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\StoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryVibe.Master.cs">
       <DependentUpon>StoryVibe.Master</DependentUpon>
@@ -86,8 +138,45 @@
     <Compile Include="wfHomePage.aspx.designer.cs">
       <DependentUpon>wfHomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wfLogin.aspx.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfLogin.aspx.designer.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfLogout.aspx.cs">
+      <DependentUpon>wfLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfLogout.aspx.designer.cs">
+      <DependentUpon>wfLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfRegister.aspx.cs">
+      <DependentUpon>wfRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfRegister.aspx.designer.cs">
+      <DependentUpon>wfRegister.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\UserService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\UserService.wsdl" />
+    <Content Include="Connected Services\UserService\Web.UserService.UsersList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="StoryVibe.Master" />
     <None Include="Web.Debug.config">
@@ -96,6 +185,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\StoryService\" />
+    <WCFMetadataStorage Include="Connected Services\UserService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

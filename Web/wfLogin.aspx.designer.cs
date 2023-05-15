@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class wfHomePage
+    public partial class wfLogin
     {
     }
 }
