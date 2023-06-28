@@ -15,6 +15,74 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServedFullStory", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelLists")]
+    [System.SerializableAttribute()]
+    public partial class ServedFullStory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.CategoryGroupList categoryGroupField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.StoriesList storiesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.CategoryGroupList categoryGroup {
+            get {
+                return this.categoryGroupField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.categoryGroupField, value) != true)) {
+                    this.categoryGroupField = value;
+                    this.RaisePropertyChanged("categoryGroup");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.StoriesList stories {
+            get {
+                return this.storiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.storiesField, value) != true)) {
+                    this.storiesField = value;
+                    this.RaisePropertyChanged("stories");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="CategoryGroupList", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelLists", ItemName="categoryGroup")]
+    [System.SerializableAttribute()]
+    public class CategoryGroupList : System.Collections.Generic.List<Web.StoryService.categoryGroup> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.CollectionDataContractAttribute(Name="StoriesList", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelLists", ItemName="Story")]
     [System.SerializableAttribute()]
     public class StoriesList : System.Collections.Generic.List<Web.StoryService.Story> {
@@ -22,43 +90,15 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Story", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="categoryGroup", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
-    public partial class Story : Web.StoryService.BaseEntity {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Web.StoryService.AgeBarrier ageBarrierField;
+    public partial class categoryGroup : Web.StoryService.BaseEntity {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Web.StoryService.Category categoryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string datePublishedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string descriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string imageLinkField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Web.StoryService.User userField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Web.StoryService.AgeBarrier ageBarrier {
-            get {
-                return this.ageBarrierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ageBarrierField, value) != true)) {
-                    this.ageBarrierField = value;
-                    this.RaisePropertyChanged("ageBarrier");
-                }
-            }
-        }
+        private Web.StoryService.Story storyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public Web.StoryService.Category category {
@@ -74,66 +114,14 @@ namespace Web.StoryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string datePublished {
+        public Web.StoryService.Story story {
             get {
-                return this.datePublishedField;
+                return this.storyField;
             }
             set {
-                if ((object.ReferenceEquals(this.datePublishedField, value) != true)) {
-                    this.datePublishedField = value;
-                    this.RaisePropertyChanged("datePublished");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
-                    this.descriptionField = value;
-                    this.RaisePropertyChanged("description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string imageLink {
-            get {
-                return this.imageLinkField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.imageLinkField, value) != true)) {
-                    this.imageLinkField = value;
-                    this.RaisePropertyChanged("imageLink");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Web.StoryService.User user {
-            get {
-                return this.userField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.userField, value) != true)) {
-                    this.userField = value;
-                    this.RaisePropertyChanged("user");
+                if ((object.ReferenceEquals(this.storyField, value) != true)) {
+                    this.storyField = value;
+                    this.RaisePropertyChanged("story");
                 }
             }
         }
@@ -145,11 +133,15 @@ namespace Web.StoryService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Leaf))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.LeafType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Category))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Language))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Status))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.User))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Story))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.User))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Chapter))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.categoryGroup))]
     public partial class BaseEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -195,8 +187,10 @@ namespace Web.StoryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Leaf", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Category))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Language))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Status))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
     public partial class Leaf : Web.StoryService.BaseEntity {
         
@@ -258,13 +252,6 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AgeBarrier", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
-    [System.SerializableAttribute()]
-    public partial class AgeBarrier : Web.StoryService.Leaf {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
     public partial class Category : Web.StoryService.Leaf {
@@ -272,9 +259,197 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AgeBarrier", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class AgeBarrier : Web.StoryService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Language", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Language : Web.StoryService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Status : Web.StoryService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Auth", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
     public partial class Auth : Web.StoryService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Story", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Story : Web.StoryService.BaseEntity {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.AgeBarrier ageBarrierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.Category categoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string datePublishedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string headerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string imageLinkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.Language languageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.Status statusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.User userField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.AgeBarrier ageBarrier {
+            get {
+                return this.ageBarrierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ageBarrierField, value) != true)) {
+                    this.ageBarrierField = value;
+                    this.RaisePropertyChanged("ageBarrier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.Category category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.categoryField, value) != true)) {
+                    this.categoryField = value;
+                    this.RaisePropertyChanged("category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string datePublished {
+            get {
+                return this.datePublishedField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.datePublishedField, value) != true)) {
+                    this.datePublishedField = value;
+                    this.RaisePropertyChanged("datePublished");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
+                    this.descriptionField = value;
+                    this.RaisePropertyChanged("description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string header {
+            get {
+                return this.headerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.headerField, value) != true)) {
+                    this.headerField = value;
+                    this.RaisePropertyChanged("header");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string imageLink {
+            get {
+                return this.imageLinkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.imageLinkField, value) != true)) {
+                    this.imageLinkField = value;
+                    this.RaisePropertyChanged("imageLink");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.Language language {
+            get {
+                return this.languageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.languageField, value) != true)) {
+                    this.languageField = value;
+                    this.RaisePropertyChanged("language");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double price {
+            get {
+                return this.priceField;
+            }
+            set {
+                if ((this.priceField.Equals(value) != true)) {
+                    this.priceField = value;
+                    this.RaisePropertyChanged("price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.Status status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.User user {
+            get {
+                return this.userField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userField, value) != true)) {
+                    this.userField = value;
+                    this.RaisePropertyChanged("user");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -288,6 +463,9 @@ namespace Web.StoryService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string birthDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string creationDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string emailField;
@@ -320,6 +498,19 @@ namespace Web.StoryService {
                 if ((object.ReferenceEquals(this.birthDateField, value) != true)) {
                     this.birthDateField = value;
                     this.RaisePropertyChanged("birthDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.creationDateField, value) != true)) {
+                    this.creationDateField = value;
+                    this.RaisePropertyChanged("creationDate");
                 }
             }
         }
@@ -364,33 +555,135 @@ namespace Web.StoryService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Chapter", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Chapter : Web.StoryService.BaseEntity {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int chapterNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string contentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Web.StoryService.Story storyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string topicField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int chapterNumber {
+            get {
+                return this.chapterNumberField;
+            }
+            set {
+                if ((this.chapterNumberField.Equals(value) != true)) {
+                    this.chapterNumberField = value;
+                    this.RaisePropertyChanged("chapterNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string content {
+            get {
+                return this.contentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.contentField, value) != true)) {
+                    this.contentField = value;
+                    this.RaisePropertyChanged("content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Web.StoryService.Story story {
+            get {
+                return this.storyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.storyField, value) != true)) {
+                    this.storyField = value;
+                    this.RaisePropertyChanged("story");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string topic {
+            get {
+                return this.topicField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.topicField, value) != true)) {
+                    this.topicField = value;
+                    this.RaisePropertyChanged("topic");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ChaptersList", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelLists", ItemName="Chapter")]
+    [System.SerializableAttribute()]
+    public class ChaptersList : System.Collections.Generic.List<Web.StoryService.Chapter> {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StoryService.IStoryService")]
     public interface IStoryService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Select", ReplyAction="http://tempuri.org/IStoryService/SelectResponse")]
-        Web.StoryService.StoriesList Select();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/SelectStories", ReplyAction="http://tempuri.org/IStoryService/SelectStoriesResponse")]
+        Web.StoryService.ServedFullStory SelectStories();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Select", ReplyAction="http://tempuri.org/IStoryService/SelectResponse")]
-        System.Threading.Tasks.Task<Web.StoryService.StoriesList> SelectAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/SelectStories", ReplyAction="http://tempuri.org/IStoryService/SelectStoriesResponse")]
+        System.Threading.Tasks.Task<Web.StoryService.ServedFullStory> SelectStoriesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Insert", ReplyAction="http://tempuri.org/IStoryService/InsertResponse")]
-        int Insert(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/AddNewStory", ReplyAction="http://tempuri.org/IStoryService/AddNewStoryResponse")]
+        int AddNewStory(Web.StoryService.Story story);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Insert", ReplyAction="http://tempuri.org/IStoryService/InsertResponse")]
-        System.Threading.Tasks.Task<int> InsertAsync(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/AddNewStory", ReplyAction="http://tempuri.org/IStoryService/AddNewStoryResponse")]
+        System.Threading.Tasks.Task<int> AddNewStoryAsync(Web.StoryService.Story story);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Update", ReplyAction="http://tempuri.org/IStoryService/UpdateResponse")]
-        int Update(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/UpdateStory", ReplyAction="http://tempuri.org/IStoryService/UpdateStoryResponse")]
+        int UpdateStory(Web.StoryService.Story story);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Update", ReplyAction="http://tempuri.org/IStoryService/UpdateResponse")]
-        System.Threading.Tasks.Task<int> UpdateAsync(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/UpdateStory", ReplyAction="http://tempuri.org/IStoryService/UpdateStoryResponse")]
+        System.Threading.Tasks.Task<int> UpdateStoryAsync(Web.StoryService.Story story);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Delete", ReplyAction="http://tempuri.org/IStoryService/DeleteResponse")]
-        int Delete(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/DeleteStory", ReplyAction="http://tempuri.org/IStoryService/DeleteStoryResponse")]
+        int DeleteStory(Web.StoryService.Story story);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/Delete", ReplyAction="http://tempuri.org/IStoryService/DeleteResponse")]
-        System.Threading.Tasks.Task<int> DeleteAsync(Web.StoryService.Story story);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/DeleteStory", ReplyAction="http://tempuri.org/IStoryService/DeleteStoryResponse")]
+        System.Threading.Tasks.Task<int> DeleteStoryAsync(Web.StoryService.Story story);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/SelectChapters", ReplyAction="http://tempuri.org/IStoryService/SelectChaptersResponse")]
+        Web.StoryService.ChaptersList SelectChapters();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/SelectChapters", ReplyAction="http://tempuri.org/IStoryService/SelectChaptersResponse")]
+        System.Threading.Tasks.Task<Web.StoryService.ChaptersList> SelectChaptersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/AddNewChapter", ReplyAction="http://tempuri.org/IStoryService/AddNewChapterResponse")]
+        int AddNewChapter(Web.StoryService.Chapter chapter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/AddNewChapter", ReplyAction="http://tempuri.org/IStoryService/AddNewChapterResponse")]
+        System.Threading.Tasks.Task<int> AddNewChapterAsync(Web.StoryService.Chapter chapter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/UpdateChapter", ReplyAction="http://tempuri.org/IStoryService/UpdateChapterResponse")]
+        int UpdateChapter(Web.StoryService.Chapter chapter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/UpdateChapter", ReplyAction="http://tempuri.org/IStoryService/UpdateChapterResponse")]
+        System.Threading.Tasks.Task<int> UpdateChapterAsync(Web.StoryService.Chapter chapter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/DeleteChapter", ReplyAction="http://tempuri.org/IStoryService/DeleteChapterResponse")]
+        int DeleteChapter(Web.StoryService.Chapter chapter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoryService/DeleteChapter", ReplyAction="http://tempuri.org/IStoryService/DeleteChapterResponse")]
+        System.Threading.Tasks.Task<int> DeleteChapterAsync(Web.StoryService.Chapter chapter);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -420,36 +713,68 @@ namespace Web.StoryService {
                 base(binding, remoteAddress) {
         }
         
-        public Web.StoryService.StoriesList Select() {
-            return base.Channel.Select();
+        public Web.StoryService.ServedFullStory SelectStories() {
+            return base.Channel.SelectStories();
         }
         
-        public System.Threading.Tasks.Task<Web.StoryService.StoriesList> SelectAsync() {
-            return base.Channel.SelectAsync();
+        public System.Threading.Tasks.Task<Web.StoryService.ServedFullStory> SelectStoriesAsync() {
+            return base.Channel.SelectStoriesAsync();
         }
         
-        public int Insert(Web.StoryService.Story story) {
-            return base.Channel.Insert(story);
+        public int AddNewStory(Web.StoryService.Story story) {
+            return base.Channel.AddNewStory(story);
         }
         
-        public System.Threading.Tasks.Task<int> InsertAsync(Web.StoryService.Story story) {
-            return base.Channel.InsertAsync(story);
+        public System.Threading.Tasks.Task<int> AddNewStoryAsync(Web.StoryService.Story story) {
+            return base.Channel.AddNewStoryAsync(story);
         }
         
-        public int Update(Web.StoryService.Story story) {
-            return base.Channel.Update(story);
+        public int UpdateStory(Web.StoryService.Story story) {
+            return base.Channel.UpdateStory(story);
         }
         
-        public System.Threading.Tasks.Task<int> UpdateAsync(Web.StoryService.Story story) {
-            return base.Channel.UpdateAsync(story);
+        public System.Threading.Tasks.Task<int> UpdateStoryAsync(Web.StoryService.Story story) {
+            return base.Channel.UpdateStoryAsync(story);
         }
         
-        public int Delete(Web.StoryService.Story story) {
-            return base.Channel.Delete(story);
+        public int DeleteStory(Web.StoryService.Story story) {
+            return base.Channel.DeleteStory(story);
         }
         
-        public System.Threading.Tasks.Task<int> DeleteAsync(Web.StoryService.Story story) {
-            return base.Channel.DeleteAsync(story);
+        public System.Threading.Tasks.Task<int> DeleteStoryAsync(Web.StoryService.Story story) {
+            return base.Channel.DeleteStoryAsync(story);
+        }
+        
+        public Web.StoryService.ChaptersList SelectChapters() {
+            return base.Channel.SelectChapters();
+        }
+        
+        public System.Threading.Tasks.Task<Web.StoryService.ChaptersList> SelectChaptersAsync() {
+            return base.Channel.SelectChaptersAsync();
+        }
+        
+        public int AddNewChapter(Web.StoryService.Chapter chapter) {
+            return base.Channel.AddNewChapter(chapter);
+        }
+        
+        public System.Threading.Tasks.Task<int> AddNewChapterAsync(Web.StoryService.Chapter chapter) {
+            return base.Channel.AddNewChapterAsync(chapter);
+        }
+        
+        public int UpdateChapter(Web.StoryService.Chapter chapter) {
+            return base.Channel.UpdateChapter(chapter);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdateChapterAsync(Web.StoryService.Chapter chapter) {
+            return base.Channel.UpdateChapterAsync(chapter);
+        }
+        
+        public int DeleteChapter(Web.StoryService.Chapter chapter) {
+            return base.Channel.DeleteChapter(chapter);
+        }
+        
+        public System.Threading.Tasks.Task<int> DeleteChapterAsync(Web.StoryService.Chapter chapter) {
+            return base.Channel.DeleteChapterAsync(chapter);
         }
     }
 }

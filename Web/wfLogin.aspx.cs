@@ -14,5 +14,23 @@ namespace Web
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            lblErrMessage.Text = "";
+
+            UserServiceClient userService = new UserServiceClient();
+            UsersList users = userService.Select();
+            User user = users.Find(x => (x.name == tbxUsername.Text && x.password == tbxPassword.Text));
+            if (user == null)
+            {
+                lblErrMessage.Text = "The data does not exist in our system";
+                return;
+            }
+            Session["userID"] = user.ID;
+            Session["userName"] = user.name;
+            Response.Redirect("wfHomePage.aspx");
+
+        }
     }
 }

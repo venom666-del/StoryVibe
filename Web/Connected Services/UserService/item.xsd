@@ -7,6 +7,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="auth" nillable="true" type="tns:Auth" />
           <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="creationDate" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />

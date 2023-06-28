@@ -2,57 +2,111 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/StoryService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model.ModelLists" />
   <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/StoryService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects" />
-  <xs:element name="Select">
+  <xs:element name="SelectStories">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="SelectResponse">
+  <xs:element name="SelectStoriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model.ModelLists" minOccurs="0" name="SelectResult" nillable="true" type="q1:StoriesList" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model.ModelLists" minOccurs="0" name="SelectStoriesResult" nillable="true" type="q1:ServedFullStory" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Insert">
+  <xs:element name="AddNewStory">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="story" nillable="true" type="q2:Story" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertResponse">
+  <xs:element name="AddNewStoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertResult" type="xs:int" />
+        <xs:element minOccurs="0" name="AddNewStoryResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Update">
+  <xs:element name="UpdateStory">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="story" nillable="true" type="q3:Story" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateResponse">
+  <xs:element name="UpdateStoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateResult" type="xs:int" />
+        <xs:element minOccurs="0" name="UpdateStoryResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Delete">
+  <xs:element name="DeleteStory">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="story" nillable="true" type="q4:Story" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DeleteResponse">
+  <xs:element name="DeleteStoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="DeleteResult" type="xs:int" />
+        <xs:element minOccurs="0" name="DeleteStoryResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectChapters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectChaptersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model.ModelLists" minOccurs="0" name="SelectChaptersResult" nillable="true" type="q5:ChaptersList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewChapter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="chapter" nillable="true" type="q6:Chapter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewChapterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewChapterResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateChapter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="chapter" nillable="true" type="q7:Chapter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateChapterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateChapterResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteChapter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" name="chapter" nillable="true" type="q8:Chapter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteChapterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteChapterResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

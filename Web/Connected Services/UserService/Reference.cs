@@ -33,6 +33,9 @@ namespace Web.UserService {
         private string birthDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string creationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string emailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -63,6 +66,19 @@ namespace Web.UserService {
                 if ((object.ReferenceEquals(this.birthDateField, value) != true)) {
                     this.birthDateField = value;
                     this.RaisePropertyChanged("birthDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.creationDateField, value) != true)) {
+                    this.creationDateField = value;
+                    this.RaisePropertyChanged("creationDate");
                 }
             }
         }

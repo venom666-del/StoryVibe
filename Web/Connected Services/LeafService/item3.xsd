@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model.ModelLists" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model.ModelLists" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects" />
+  <xs:complexType name="LeavesList">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model.ModelObjects" minOccurs="0" maxOccurs="unbounded" name="Leaf" nillable="true" type="q1:Leaf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LeavesList" nillable="true" type="tns:LeavesList" />
+</xs:schema>

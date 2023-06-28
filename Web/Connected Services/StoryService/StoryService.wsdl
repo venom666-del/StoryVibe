@@ -9,52 +9,92 @@
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/StoryService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Model" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IStoryService_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Select" />
+  <wsdl:message name="IStoryService_SelectStories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStories" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectResponse" />
+  <wsdl:message name="IStoryService_SelectStories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStoriesResponse" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Insert" />
+  <wsdl:message name="IStoryService_AddNewStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStory" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  <wsdl:message name="IStoryService_AddNewStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewStoryResponse" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Update" />
+  <wsdl:message name="IStoryService_UpdateStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStory" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  <wsdl:message name="IStoryService_UpdateStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStoryResponse" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Delete_InputMessage">
-    <wsdl:part name="parameters" element="tns:Delete" />
+  <wsdl:message name="IStoryService_DeleteStory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStory" />
   </wsdl:message>
-  <wsdl:message name="IStoryService_Delete_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  <wsdl:message name="IStoryService_DeleteStory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_SelectChapters_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectChapters" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_SelectChapters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectChaptersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_AddNewChapter_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewChapter" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_AddNewChapter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewChapterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_UpdateChapter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChapter" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_UpdateChapter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChapterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_DeleteChapter_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChapter" />
+  </wsdl:message>
+  <wsdl:message name="IStoryService_DeleteChapter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChapterResponse" />
   </wsdl:message>
   <wsdl:portType name="IStoryService">
-    <wsdl:operation name="Select">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/Select" message="tns:IStoryService_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/SelectResponse" message="tns:IStoryService_Select_OutputMessage" />
+    <wsdl:operation name="SelectStories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/SelectStories" message="tns:IStoryService_SelectStories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/SelectStoriesResponse" message="tns:IStoryService_SelectStories_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Insert">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/Insert" message="tns:IStoryService_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/InsertResponse" message="tns:IStoryService_Insert_OutputMessage" />
+    <wsdl:operation name="AddNewStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/AddNewStory" message="tns:IStoryService_AddNewStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/AddNewStoryResponse" message="tns:IStoryService_AddNewStory_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Update">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/Update" message="tns:IStoryService_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/UpdateResponse" message="tns:IStoryService_Update_OutputMessage" />
+    <wsdl:operation name="UpdateStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/UpdateStory" message="tns:IStoryService_UpdateStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/UpdateStoryResponse" message="tns:IStoryService_UpdateStory_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Delete">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/Delete" message="tns:IStoryService_Delete_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/DeleteResponse" message="tns:IStoryService_Delete_OutputMessage" />
+    <wsdl:operation name="DeleteStory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/DeleteStory" message="tns:IStoryService_DeleteStory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/DeleteStoryResponse" message="tns:IStoryService_DeleteStory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectChapters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/SelectChapters" message="tns:IStoryService_SelectChapters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/SelectChaptersResponse" message="tns:IStoryService_SelectChapters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewChapter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/AddNewChapter" message="tns:IStoryService_AddNewChapter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/AddNewChapterResponse" message="tns:IStoryService_AddNewChapter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChapter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/UpdateChapter" message="tns:IStoryService_UpdateChapter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/UpdateChapterResponse" message="tns:IStoryService_UpdateChapter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChapter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoryService/DeleteChapter" message="tns:IStoryService_DeleteChapter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoryService/DeleteChapterResponse" message="tns:IStoryService_DeleteChapter_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IStoryService" type="tns:IStoryService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Select">
-      <soap:operation soapAction="http://tempuri.org/IStoryService/Select" style="document" />
+    <wsdl:operation name="SelectStories">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/SelectStories" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -62,8 +102,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Insert">
-      <soap:operation soapAction="http://tempuri.org/IStoryService/Insert" style="document" />
+    <wsdl:operation name="AddNewStory">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/AddNewStory" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -71,8 +111,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Update">
-      <soap:operation soapAction="http://tempuri.org/IStoryService/Update" style="document" />
+    <wsdl:operation name="UpdateStory">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/UpdateStory" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -80,8 +120,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Delete">
-      <soap:operation soapAction="http://tempuri.org/IStoryService/Delete" style="document" />
+    <wsdl:operation name="DeleteStory">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/DeleteStory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectChapters">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/SelectChapters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewChapter">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/AddNewChapter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChapter">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/UpdateChapter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChapter">
+      <soap:operation soapAction="http://tempuri.org/IStoryService/DeleteChapter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

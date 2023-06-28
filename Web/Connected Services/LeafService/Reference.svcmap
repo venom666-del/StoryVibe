@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="f1559d77-1c11-41da-bc17-cea9971b8249" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="40a63191-e463-4c12-9aa0-999dbee27302" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="632904b1-54ec-4894-b9a9-607434c70709" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="294bc0d2-1a7b-4f91-89b9-4c88d9516bde" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="5acd7403-5751-4e04-8722-13eedb31d370" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd3" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="4124a3cd-f6ba-41dd-ab94-8be328b036fc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?xsd=xsd4" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="42e85990-2568-4266-9ade-4ca7ea93b2fe" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?disco" />
+    <MetadataFile FileName="LeafService.wsdl" MetadataType="Wsdl" ID="3eb7106f-a5db-461e-b5c1-c131c7ba0e48" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/LeafService/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

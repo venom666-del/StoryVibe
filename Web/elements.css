@@ -1,0 +1,105 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.primary-link {
+    border: 1px solid #f13737;
+    padding: 7px 15px;
+    border-radius: 2px;
+    transition: .2s ease;
+}
+
+.primary-link:hover {
+    background-color: #f13737;
+    color: #fff;
+}
+
+.story-header{
+    font-size: 30px;
+    color: #fff;
+}
+
+.story-description {
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: #e2e2e2;
+}
+
+.primary-button {
+    background: #f13737;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    width: 100%;
+}
+
+.category-tag{
+    padding: 4px 10px;
+    background: #e2e2e2;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.category-tag::before{
+    content: '#';
+    color: #f13737;
+}
+
+.story-status{
+    padding: 10px;
+    border-radius: 20px;
+    background: #252525;
+    color: #e2e2e2;
+    display: flex;
+    align-items: center;
+}
+
+.Finished {
+    color: green;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.In-Progress {
+    color: blue;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.On-Hold {
+    color: #666666;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.form-icons{
+    font-size: 15px;
+    background-color: #252525;
+    color: #666666;
+    padding: 20px;
+}
+
+.form-input {
+    padding: 0 5px;
+    width: 100%;
+    outline: 0;
+    border-radius: 0 3px 3px 0;
+    border: none;
+    background: #1c1c1c;
+    font-size: 17px;
+    color: #fff;
+}
+
+.form-header{
+    font-size: 40px;
+    color: #e2e2e2;
+    text-align: center;
+    margin-bottom: 20px;
+}
