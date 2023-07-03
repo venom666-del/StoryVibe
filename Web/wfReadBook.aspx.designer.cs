@@ -11,25 +11,16 @@ namespace Web
 {
 
 
-    public partial class wfHomePage
+    public partial class wfReadBook
     {
 
         /// <summary>
-        /// lblHeroPageInformative control.
+        /// lblChapter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHeroPageInformative;
-
-        /// <summary>
-        /// lblLongGeneralStories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLongGeneralStories;
+        protected global::System.Web.UI.WebControls.Label lblChapter;
     }
 }

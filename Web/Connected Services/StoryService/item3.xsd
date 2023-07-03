@@ -41,33 +41,14 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="LeafType" nillable="true" type="tns:LeafType" />
-  <xs:complexType name="Story">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Model" base="q4:BaseEntity">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="ageBarrier" nillable="true" type="tns:AgeBarrier" />
-          <xs:element minOccurs="0" name="category" nillable="true" type="tns:Category" />
-          <xs:element minOccurs="0" name="datePublished" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="header" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="imageLink" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="language" nillable="true" type="tns:Language" />
-          <xs:element minOccurs="0" name="price" type="xs:double" />
-          <xs:element minOccurs="0" name="status" nillable="true" type="tns:Status" />
-          <xs:element minOccurs="0" name="user" nillable="true" type="tns:User" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Story" nillable="true" type="tns:Story" />
-  <xs:complexType name="AgeBarrier">
+  <xs:complexType name="Auth">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Leaf">
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="AgeBarrier" nillable="true" type="tns:AgeBarrier" />
+  <xs:element name="Auth" nillable="true" type="tns:Auth" />
   <xs:complexType name="Language">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Leaf">
@@ -84,6 +65,34 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="AgeBarrier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgeBarrier" nillable="true" type="tns:AgeBarrier" />
+  <xs:complexType name="Story">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Model" base="q4:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ageBarrier" nillable="true" type="tns:AgeBarrier" />
+          <xs:element minOccurs="0" name="category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="datePublished" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="imageLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="language" nillable="true" type="tns:Language" />
+          <xs:element minOccurs="0" name="price" type="xs:double" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="tns:Status" />
+          <xs:element minOccurs="0" name="user" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="views" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Story" nillable="true" type="tns:Story" />
   <xs:complexType name="User">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Model" base="q5:BaseEntity">
@@ -99,20 +108,13 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="User" nillable="true" type="tns:User" />
-  <xs:complexType name="Auth">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:Leaf">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Auth" nillable="true" type="tns:Auth" />
   <xs:complexType name="Chapter">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Model" base="q6:BaseEntity">
         <xs:sequence>
           <xs:element minOccurs="0" name="chapterNumber" type="xs:int" />
           <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="datePublished" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="story" nillable="true" type="tns:Story" />
           <xs:element minOccurs="0" name="topic" nillable="true" type="xs:string" />
         </xs:sequence>

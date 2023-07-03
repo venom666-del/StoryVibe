@@ -91,7 +91,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg" />
+    <Content Include="images\The-abc-murders-book-cover.jpg" />
     <Content Include="OAuth.js" />
+    <Content Include="wfReadBook.aspx" />
     <Content Include="wfSingleCategory.aspx" />
     <None Include="Connected Services\LeafService\item.xsd">
       <SubType>Designer</SubType>
@@ -211,6 +214,13 @@
     </Compile>
     <Compile Include="wfLogout.aspx.designer.cs">
       <DependentUpon>wfLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfReadBook.aspx.cs">
+      <DependentUpon>wfReadBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfReadBook.aspx.designer.cs">
+      <DependentUpon>wfReadBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfRegister.aspx.cs">
       <DependentUpon>wfRegister.aspx</DependentUpon>

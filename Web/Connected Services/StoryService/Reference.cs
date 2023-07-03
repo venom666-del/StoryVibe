@@ -134,10 +134,10 @@ namespace Web.StoryService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Leaf))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.LeafType))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Category))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Language))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Status))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Story))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.User))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Chapter))]
@@ -188,10 +188,10 @@ namespace Web.StoryService {
     [System.Runtime.Serialization.DataContractAttribute(Name="Leaf", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Category))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Language))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Status))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.Auth))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.StoryService.AgeBarrier))]
     public partial class Leaf : Web.StoryService.BaseEntity {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -259,9 +259,9 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AgeBarrier", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Auth", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
-    public partial class AgeBarrier : Web.StoryService.Leaf {
+    public partial class Auth : Web.StoryService.Leaf {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -280,9 +280,9 @@ namespace Web.StoryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Auth", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AgeBarrier", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
-    public partial class Auth : Web.StoryService.Leaf {
+    public partial class AgeBarrier : Web.StoryService.Leaf {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -320,6 +320,9 @@ namespace Web.StoryService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Web.StoryService.User userField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int viewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public Web.StoryService.AgeBarrier ageBarrier {
@@ -450,6 +453,19 @@ namespace Web.StoryService {
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int views {
+            get {
+                return this.viewsField;
+            }
+            set {
+                if ((this.viewsField.Equals(value) != true)) {
+                    this.viewsField = value;
+                    this.RaisePropertyChanged("views");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -568,6 +584,9 @@ namespace Web.StoryService {
         private string contentField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string datePublishedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Web.StoryService.Story storyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -595,6 +614,19 @@ namespace Web.StoryService {
                 if ((object.ReferenceEquals(this.contentField, value) != true)) {
                     this.contentField = value;
                     this.RaisePropertyChanged("content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string datePublished {
+            get {
+                return this.datePublishedField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.datePublishedField, value) != true)) {
+                    this.datePublishedField = value;
+                    this.RaisePropertyChanged("datePublished");
                 }
             }
         }

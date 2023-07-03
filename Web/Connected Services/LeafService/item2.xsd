@@ -32,6 +32,13 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="all">
         <xs:annotation>
           <xs:appinfo>
@@ -63,4 +70,44 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="LeafType" nillable="true" type="tns:LeafType" />
+  <xs:complexType name="Auth">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Auth" nillable="true" type="tns:Auth" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="Language">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Language" nillable="true" type="tns:Language" />
+  <xs:complexType name="Status">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="AgeBarrier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgeBarrier" nillable="true" type="tns:AgeBarrier" />
 </xs:schema>

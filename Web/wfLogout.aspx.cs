@@ -11,7 +11,8 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["ID"] = null;
+            Session["userID"] = null;
+            Session["userName"] = null;
             Response.Redirect("wfHomePage.aspx");
         }
     }
