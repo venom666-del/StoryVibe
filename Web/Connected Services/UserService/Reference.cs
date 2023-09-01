@@ -130,6 +130,10 @@ namespace Web.UserService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Leaf))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.LeafType))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Auth))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Category))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Language))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Status))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.AgeBarrier))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.User))]
     public partial class BaseEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -177,6 +181,10 @@ namespace Web.UserService {
     [System.Runtime.Serialization.DataContractAttribute(Name="Leaf", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Auth))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Category))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Language))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.Status))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Web.UserService.AgeBarrier))]
     public partial class Leaf : Web.UserService.BaseEntity {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -240,6 +248,34 @@ namespace Web.UserService {
     [System.Runtime.Serialization.DataContractAttribute(Name="Auth", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
     [System.SerializableAttribute()]
     public partial class Auth : Web.UserService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Category : Web.UserService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Language", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Language : Web.UserService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class Status : Web.UserService.Leaf {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AgeBarrier", Namespace="http://schemas.datacontract.org/2004/07/Model.ModelObjects")]
+    [System.SerializableAttribute()]
+    public partial class AgeBarrier : Web.UserService.Leaf {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

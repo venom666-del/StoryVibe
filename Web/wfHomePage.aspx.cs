@@ -49,8 +49,8 @@ namespace Web
             lblLongGeneralStories.Text += $"<div class=\"Long-Hero-Page-Stories-cont\">";
             foreach (Story story in stories.stories)
             {
-                lblLongGeneralStories.Text += $"<div class=\"whole-story-wrapper\">";
-                lblLongGeneralStories.Text += $"<div style=\"position: relative;\">" +$"<div><img class=\"book-cover-homepage\" src=\"images/{story.imageLink}\" /></div>" +$"<div><input style=\"width: 125px!important\" class=\"primary-button\" name=\"bookID{story.ID}\" type=\"submit\" value=\"READ NOW\" /></div>" +$"</div>";
+                lblLongGeneralStories.Text += $"<a class=\"go-to-details-link\" href=\"wfSingleBookDetailed.aspx?singleBookID={story.ID}\"><div class=\"whole-story-wrapper\">";
+                lblLongGeneralStories.Text += $"<div style=\"position: relative; margin-right: 20px;\">" +$"<div><img class=\"book-cover-homepage\" src=\"images/{story.imageLink}\" /></div>" +$"<div><input class=\"primary-button\" name=\"bookID{story.ID}\" type=\"submit\" value=\"READ NOW\" /></div>" +$"</div>";
                 lblLongGeneralStories.Text += $"<div>";
                 lblLongGeneralStories.Text += $"<div class=\"Long-Hero-Page-Story\">";
                 lblLongGeneralStories.Text += $"<div style=\"display: flex; align-items: center;\">" +$"<div class=\"story-header\">{story.header}</div><span class=\"header-span\" style=\"color: #f13737; font-size: 30px; padding: 0 5px;\">|</span><div class=\"story-description beside-story-header-secondary-story-info\">{story.user.name}</div><span class=\"header-span\" style=\"color: #f13737; font-size: 30px; padding: 0 5px;\">|</span><div class=\"story-description beside-story-header-secondary-story-info\">{story.datePublished}</div></div>";
@@ -68,7 +68,7 @@ namespace Web
                 {
                     chapters.Add(chapter);
                 }
-                lblLongGeneralStories.Text += $"<div class=\"nav-item\">number of chapters: {chapters.Count}.</div>";
+                lblLongGeneralStories.Text += $"<div class=\"nav-item\">{chapters.Count} chapters.</div>";
                 lblLongGeneralStories.Text += $"<div class=\"nav-item story-status\"><i class=\"fa-sharp fa-solid fa-circle-dot {story.status.name}\"></i>{story.status.name}";
                 if (story.status.name == "In-Progress")
                 {
@@ -82,7 +82,7 @@ namespace Web
                 lblLongGeneralStories.Text += "</div>";
                 lblLongGeneralStories.Text += $"<div class=\"above-readnow-button-cont\"><div class=\"story-description above-readnow-button-secondary-story-info\">{story.user.name}</div><span class=\"above-button-span\" style=\"color: #f13737; font-size: 30px; padding: 0 5px;\">|</span><div class=\"story-description above-readnow-button-secondary-story-info\">{story.datePublished}</div></div></div>";
                 lblLongGeneralStories.Text += $"</div>";
-                lblLongGeneralStories.Text += $"</div>";
+                lblLongGeneralStories.Text += $"</div></a>";
             }
             lblLongGeneralStories.Text += $"</div>";
         }

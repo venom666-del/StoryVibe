@@ -69,5 +69,6 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <script src="animations.js"></script>
 </body>
 </html>

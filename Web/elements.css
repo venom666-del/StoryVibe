@@ -3,11 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-.primary-link {
+.primary-link, .add-to-readlist-link {
     border: 1px solid #f13737;
     padding: 7px 15px;
     border-radius: 2px;
     transition: .2s ease;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+
+.add-to-readlist-link{
+    border-radius: 50px;
+}
+
+.add-to-readlist-link:hover{
+    content: "dfgdfgdfg";
 }
 
 .primary-link:hover {
@@ -36,12 +47,16 @@
 .primary-button {
     background: #f13737;
     color: #fff;
-    padding: 7px 15px;
+    padding: 7px 0px;
     border-radius: 2px;
     border: none;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     width: 100%;
+    transition: .3s ease;
+}
+.primary-button:hover{
+    letter-spacing: 1px;
 }
 
 .category-tag{
@@ -132,4 +147,10 @@ a{
     font-size: 20px;
     color: #9c9999;
     font-weight: bold;
+}
+
+.redSeparator {
+    color: #f13737;
+    font-size: 30px;
+    padding: 0 5px
 }

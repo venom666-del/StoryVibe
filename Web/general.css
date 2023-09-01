@@ -205,11 +205,29 @@ ul li:hover {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
+    transition: 0.3s ease;
+    border: 1px solid #a0434300;
+    padding: 5px;
+}
+
+.whole-story-wrapper:hover{
+    box-shadow: 0 0 30px #222;
+    animation: 2s WhiteBorder ease;
+    border: 1px solid #fff0;
+}
+
+@keyframes WhiteBorder{
+    50%{
+        border: 1px solid #fff;
+    }
+
+    100% {
+        border: 1px solid #fff0;
+    }
 }
 
 .book-cover-homepage{
     width: 125px;
-    margin-right: 20px;
 }
 
 .book-cover-reading-page{
@@ -439,4 +457,34 @@ ul li:hover {
     align-items: center;
     padding: 100px;
     margin-bottom: 60px;
+}
+
+.SP-hero-cont {
+    border: 1px solid #fff;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    position: relative
+        
+}
+
+.SP-book-cover{
+    width: 200px;
+}
+
+.SP-info{
+    margin-left: 10px;
+}
+
+.SP-header-cont{
+    display: flex;
+    align-items:center;
+    justify-content: start;
+}
+
+.SP-interactive-btn-cont{
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
 }

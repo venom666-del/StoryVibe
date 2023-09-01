@@ -20,7 +20,17 @@ namespace Web
             if (!IsPostBack)
             {
                 Populate();
+                AddSingleView();
             }
+        }
+
+        public void AddSingleView()
+        {
+            StoryServiceClient storyService = new StoryServiceClient();
+            ServedFullStory fullStories = storyService.SelectStories();
+            Story story = fullStories.stories.Find(x => x.ID == int.Parse(Session["bookID"].ToString()));
+            story.views++;
+            int rows = storyService.UpdateStory(story);
         }
 
         public void Populate()
