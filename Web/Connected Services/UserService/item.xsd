@@ -45,4 +45,36 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="LeafType" nillable="true" type="tns:LeafType" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="Language">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Language" nillable="true" type="tns:Language" />
+  <xs:complexType name="Status">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="AgeBarrier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Leaf">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgeBarrier" nillable="true" type="tns:AgeBarrier" />
 </xs:schema>
