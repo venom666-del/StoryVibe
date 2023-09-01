@@ -61,7 +61,7 @@ namespace Web
                     lblLongGeneralStories.Text += $"<span class=\"category-tag\"> {category.category.name}</span>";
                 }
                 lblLongGeneralStories.Text += "</div>";
-
+                
                 lblLongGeneralStories.Text += $"<div class=\"story-info\">";
                 ChaptersList chapters = new ChaptersList();
                 foreach (Chapter chapter in storyService.SelectChapters().FindAll(x => x.story.ID == story.ID).OrderBy(x => x.datePublished))
