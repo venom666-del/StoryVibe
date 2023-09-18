@@ -23,7 +23,6 @@ namespace Web
                 AddSingleView();
             }
         }
-
         public void AddSingleView()
         {
             StoryServiceClient storyService = new StoryServiceClient();

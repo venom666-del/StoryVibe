@@ -37,10 +37,10 @@
         <div class="left-menu">
             <div class="accordion">
                 <div class="section">
-                    <label for="section-0"><a style="color: #fff; text-decoration: none" href="wfHomePage.aspx"><span>Discover  <i class="fa-solid fa-earth-americas"></i></span></a></label>
+                    <label for="section-0"><a style="color: #fff; text-decoration: none" checked="checked" href="wfHomePage.aspx"><span>Discover  <i class="fa-solid fa-earth-americas"></i></span></a></label>
                 </div>
                 <div class="section">
-                    <input type="radio" name="accordion-1" id="section-1" checked="checked" />
+                    <input type="radio" name="accordion-1" id="section-1"/>
                     <label for="section-1"><span>categories (scroll...)</span></label>
                     <div class="content">
                         <ul>
